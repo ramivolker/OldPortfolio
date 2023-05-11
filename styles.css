@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Edu+NSW+ACT+Foundation&family=Montserrat:wght@400;700&family=Oswald:wght@200;500&family=Poppins:ital,wght@0,200;0,300;1,200;1,300&family=Quicksand:wght@300;400;500;700&family=Roboto:ital,wght@0,400;0,500;1,300&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: local('DIN Next LT Pro Next Rounded LT Pro Bold'), local('DIN-Next-LT-Pro-Next-Rounded-LT-Pro-Bold'),
+        url('DINNextRoundedLTPro-Bold.woff2') format('woff2'),
+        url('DINNextRoundedLTPro-Bold.woff') format('woff'),
+        url('DINNextRoundedLTPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+:root{
+    --primario: #047BC3;
+    --secundario: #DE2618;
+    --secundariohover: #9c1c12;
+    --gradiente1-1: #75140d;
+    --gradiente1-2: #3d0905;
+    --gradient: linear-gradient(62deg, #3a3c3f 0%, #0f0e0f 100%);
+}
+
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+img{
+    width: 200px;
+}
+
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    background-color: var(--secundario);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 0 5px black;
+}
+
+#navlist{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+#navlist li{
+    list-style: none;
+}
+
+#navlist li a{
+    padding: 1.5rem 2.5rem;
+    display: block;
+    text-decoration: none;
+    font-family: poppins, roboto;
+    font-size: 1.2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#navlist li a:hover{
+    color: #bbb;
+    background-color: var(--secundariohover);
+}
+
+body{
+    width: 100%;
+}
+
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-image: var(--gradient);
+}
+
+
+
+h1{
+    font-size: 5rem;
+    font-family: source sans pro;
+    color: #eee;
+    text-align: center;
+    z-index: 1;
+}
+
+#welcome-section p{
+    font-size: 2rem;
+    font-family: poppins;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--secundario);
+    z-index: 1;
+}
+
+#projects{
+    width: 100%;
+    background-color: #571c1c;
+    padding: 5rem 0rem;
+}
+
+#container-projects > h3{
+    font-size: 2.5rem;
+    font-family: poppins;
+    color: white;
+    margin: 2rem 0;
+}
+
+#container-projects{
+    display: flex;
+    flex-flow: column;
+    max-width: 1300px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+#projects-grid a{
+    display: flex;
+    height: 300px;
+    flex-flow: column;
+    background-color: rgb(66, 66, 66);
+    align-items: center;
+}
+
+#projects-grid a img{
+    width: 100%;
+    height: calc(100% - 6rem);
+    object-fit: cover;
+    display: block;
+}
+
+#projects-grid a h3{
+    font-family: poppins;
+    color: white;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+#projects-grid a p{
+    font-family: poppins;
+    color: #ccc;
+    text-decoration: none;
+    margin-top: 0.2rem;
+    
+}
+
+a{
+    text-decoration:none;
+}
+
+.project-tile{
+    box-shadow: rgb(58, 58, 58) 0 0 5px;
+    transition: all 0.7s ease;
+}
+
+.project-tile:hover{
+    box-shadow: rgb(117, 117, 117) 0 0 12px;
+    transform: scale(1.1);
+}
+
+#skills-section{
+    width: 100%;
+    background-image: linear-gradient(62deg, #3a3c3f 0%, #0f0e0f 100%);
+}
+
+#skills-container > h2{
+    font-size: 4rem;
+    font-family: poppins;
+    font-weight: 400;
+    color: white;
+    align-self: center;
+    
+    padding: 2rem 5rem;
+    margin-top: 5rem;
+}
+
+
+
+#skills-container{
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    flex-flow: column;
+    padding-bottom: 8rem;
+}
+
+#skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    width: 100%;
+    border-top: var(--secundario) 1px solid;
+    margin: 0 auto;
+}
+
+.skills-card{
+    /*
+    background-color: gray;
+    border: 1px solid black;
+    */
+    display: flex;
+    flex-flow:column;
+    align-content: center;
+}
+
+.skills-card h3{
+    font-size: 2rem;
+    font-family: poppins, sans-serif;
+    color: white;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 2rem 2rem 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-card img{
+    align-self: center;
+    margin: auto;
+}
+
+#links-section{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    background-image: linear-gradient(62deg, var(--gradiente1-1)  0%, var(--gradiente1-2) 100%);
+    padding: 10rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#links-title-container{
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+}
+
+#links-title-container>h3,h5{
+    font-size: 4rem;
+    font-family: poppins;
+    color: #efefef;
+    margin: 0;
+}
+
+#links-title-container>h5{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #ddd;
+    font-style: italic;
+}
+
+#container-link{
+    padding-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-media-link{
+    padding: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+    color: #efefef;
+    text-shadow: 2px 2px 1px black;
+    transition: all 0.5s ease-out;
+    border-radius: 20px 20px;
+    padding-right: 20px;
+}
+
+.social-media-link i{
+    margin: 0 10px;
+}
+
+.social-media-link:hover{
+    transform: translateY(-5px);
+    background-color: #3d0905;
+}
+
+footer{
+    width: 100%;
+    background-image: var(--gradient);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p{
+    font-size: 1rem;
+    color: #bbb;
+    text-decoration: none;
+    font-family: poppins, sans-serif; 
+    margin: 2rem 3rem;
+}
+
+footer p a{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+footer p a:hover{
+    color: #047BC3;
+}
+
+#version-id{
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+    align-self: center;
+    position: absolute;
+    transform: translateY(1rem);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@media (max-width:1300px){
+    #skills-grid{
+        width: 80%;
+    }
+}
+
+@media (max-width: 894px){
+    #version-id{
+        position: static;
+        transform:translate(0);
+    }
+    
+    footer p{
+        margin: 1.5rem 3rem;
+    }
+}
+
+@media (max-width:695px){
+    #navlist li a{
+        padding: 1.5rem 2rem;
+    }
+
+    #navlist{
+        margin: 0;
+    }
+
+    #projects{
+        padding: 1rem 0;
+    }
+
+    #container-projects h3{
+        text-align: center;
+    }
+}
+
+@media (max-width:672px){
+    .social-media-link{
+        text-align: center;
+    }
+    .social-media-link i{
+        text-align: center;
+        align-self:center;
+        justify-self: center;
+        display: inline-block;
+    }
+
+    #container-link{
+        padding: 2rem 10px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+
+@media (max-width:618px){
+    #links-title-container h3{
+        text-align: center;
+    }
+}
+
+@media (max-width:533px){
+    footer p{
+        margin: 1rem 0.5rem;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 505px){
+    #navlist li a{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    #navlist{
+        width: 100%;
+    }
+}
+
+@media (max-width: 415px){
+    .social-media-link{
+        font-size: 1.2rem;
+    }
+
+    .social-media-link i{
+        margin: 5px;
+    }
+}
+
+@media (max-width: 350px){
+    #links-title-container h5{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #navlist li a{
+        padding: 1rem 10px;
+        font-size: 1rem;
+    }
+}
+/* ULTIMA VEZ LO DEJÉ ACÁ, IBA A CAMBIAR EL NAVBAR QUE DEJA DE VERSE A MENOR RESOLUCION
